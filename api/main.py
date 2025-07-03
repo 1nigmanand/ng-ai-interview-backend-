@@ -37,7 +37,7 @@ logger.add(
 
 app = FastAPI(
     title=config.app.name,
-    openapi_url=f"{config.app.api_v1_str}/openapi.yaml",
+    openapi_url=f"{config.app.api_v1_str}/openapi.json",
     docs_url=f"{config.app.api_v1_str}/doc",
 )
 
@@ -86,4 +86,4 @@ if __name__ == "__main__":
         host=config.server.host,
         port=config.server.port,
         reload=config.server.reload
-    ) 
+    )
